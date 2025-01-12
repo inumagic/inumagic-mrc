@@ -1,206 +1,156 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.84.0">
-    <title>Carousel Template · Bootstrap v5.0</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
-
-    
+    <meta name="description" content="魔法牙醫-兒童新式矯正">
+    <meta name="author" content="魔法牙醫">
+    <title>魔法牙醫-兒童新式矯正</title>
 
     <!-- Bootstrap core CSS -->
-<link href="bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
 
     <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
+      /* GLOBAL STYLES */
+      body {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        color: #5a5a5a;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
       }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+      h2 {
+        margin-top: 2rem;
+        font-size: 2.5rem;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      h3 {
+        margin: 1rem auto;
+        font-size: 1.2rem;
+        line-height: 1.5;
+      }
+
+      .carousel {
+        margin: 3rem auto;
+      }
+
+      .carousel-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      .featurette-heading {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #704296;
+      }
+
+      .lead {
+        color: #704296;
+      }
+
+      .consult-button {
+        background-color: #704296;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .consult-button:hover {
+        background-color: #563d7c;
+      }
+
+      footer {
+        margin-top: 3rem;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #777;
+      }
+
+      @media (max-width: 768px) {
+        h2 {
+          font-size: 2rem;
+        }
+
+        .carousel-item {
+          height: auto;
+        }
+
+        .featurette-heading {
+          font-size: 1.5rem;
+        }
+
+        .consult-button {
+          font-size: 1rem;
+          padding: 8px 15px;
         }
       }
     </style>
-
-    
-    <!-- Custom styles for this template -->
-    <link href="spa.css" rel="stylesheet">
   </head>
+
   <body>
-    
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: rgb(255, 255, 255);">
+      <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #fff;">
         <div class="container-fluid">
-          <!-- Logo -->
           <a href="https://www.inumagic.com/">
-            <img src="魔法牙醫 LOGO.png" alt="Inu Magic Logo" style="height: 50px;">
+            <img src="logo.png" alt="魔法牙醫 Logo" style="height: 65px;">
           </a>
-          <!-- Toggle button for smaller screens -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <!-- Navbar content -->
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-              <!-- Add other navbar items here if needed -->
-            </ul>
-            <!-- Line button -->
-            <a href="https://line.me/R/ti/p/@642mjtib?oat_content=url&ts=11061732" class="btn btn-outline-dark" style="margin-left: auto;">Line</a>
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>
+            <a href="https://line.me/R/ti/p/@642mjtib" style="color: #704296; font-weight: bold;">Line</a>
           </div>
         </div>
       </nav>
     </header>
-    
 
-<main>
+    <main>
+      <section>
+        <a href="https://line.me/R/ti/p/@642mjtib">
+          <img src="banner.png" style="width: 100%; height: auto;">
+        </a>
+      </section>
 
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <svg class="bd-placeholder-img"  height="auto" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-        <img src="只需2萬元1.jpg" >
-       
-        </div>
-      </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-<img src="只需2萬元2.jpg">
-<div class="container">
-  <div class="carousel-caption">
-    <h1>Another example headline.</h1>
-    <p>Some representative placeholder content for the second slide of the carousel.</p>
-    <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-  </div>
-</div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+      <div class="container marketing">
+        <section>
+          <h2>為什麼6到10歲是兒童矯正『超級黃金期』？</h2>
+          <p class="lead">✓ 預防未來困擾：避免孩子因咬合不良、牙齒凌亂等問題！</p>
+          <p class="lead">✓ 青春期自信心提升：預防外貌問題導致的情緒障礙！</p>
+          <p class="lead">✓ 抓住矯正黃金期：避免未來二次矯正或矯正失敗！</p>
+        </section>
 
-        <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>One more for good measure.</h1>
-            <p>Some representative placeholder content for the third slide of this carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+        <hr class="featurette-divider">
+
+        <div class="container col-xxl-8 px-4 py-5">
+          <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+              <img src="case-example.png" class="d-block mx-lg-auto img-fluid" alt="案例展示" width="700" height="500">
+            </div>
+            <div class="col-lg-6">
+              <h1 class="featurette-heading">讓孩子從小建立自信與美麗的笑容！</h1>
+              <button type="button" class="consult-button" onclick="window.open('https://line.me/R/ti/p/@642mjtib')">馬上咨詢</button>
+            </div>
           </div>
         </div>
+
+        <hr class="featurette-divider">
       </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
 
-
-  <!-- Marketing messaging and featurettes
-  ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
-
-  <div class="container marketing">
-
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-        <h2>Heading</h2>
-        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-        <h2>Heading</h2>
-        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-        <h2>Heading</h2>
-        <p>And lastly this, the third column of representative placeholder content.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-
-
-    <!-- START THE FEATURETTES -->
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
-      </div>
-      <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
-      </div>
-      <div class="col-md-5 order-md-1">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
-      </div>
-      <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <!-- /END THE FEATURETTES -->
-
-  </div><!-- /.container -->
-
-
-  <!-- FOOTER -->
-  <footer class="container">
-    <p class="float-end"><a href="#">Back to top</a></p>
-    <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-  </footer>
-</main>
-
+      <footer>
+        <p>&copy; 2025 魔法牙醫診所. 版權所有.</p>
+      </footer>
+    </main>
 
     <script src="bootstrap.bundle.min.js"></script>
-
-      
   </body>
 </html>
