@@ -20,8 +20,8 @@ h2 {
   color: #F98B88;
   margin-top: auto;
   padding: auto;
-  font-size: 3rem;
-  text-align: center;
+  font-size: 1.8rem;
+  text-align: left;
   font-weight: bolder;
 }
 
@@ -46,6 +46,12 @@ p{
   font-size: 1.5rem;
   line-height: 2rem;
   margin-top: 1rem;
+}
+
+li{
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 1rem ;
 }
 
 /* CUSTOMIZE THE CAROUSEL
@@ -146,8 +152,8 @@ p{
 /* Global adjustments for mobile view */
 @media (max-width: 768px) {
   h2 {
-    font-size: 3rem;
-    margin: 2rem auto;
+    font-size: 2rem;
+    margin: 1.8rem auto;
     text-align: center;
   }
 
@@ -201,4 +207,18 @@ p{
 
 .fade-in {
   animation: fadeIn 1.5s ease-in-out;
+}
+
+.answer {
+  display: none;
+  padding: 10px;
+  margin: 5px 5px 20px 5px;
+  background-color: #e0e0ff;
+}
+
+.question{
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 1rem;
+  font-weight: bold;
 }
