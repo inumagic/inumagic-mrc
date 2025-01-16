@@ -18,9 +18,8 @@ h1 {
 
 h2 {
   color: #F98B88;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   text-align: left;
-  font-weight: bolder;
 }
 
 h3{
@@ -41,15 +40,15 @@ p{
 }
 
 .lead{
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
   margin-top: 0.5rem;
 }
 
 li{
-  font-size: 1.5rem;
-  line-height: 2rem;
-  margin-bottom: 0.5rem ;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* CUSTOMIZE THE CAROUSEL
@@ -88,9 +87,7 @@ li{
   margin-bottom: 1.5rem;
   text-align: center;
 }
-.marketing h2 {
-  font-weight: bolder;
-}
+
 /* rtl:begin:ignore */
 .marketing .col-lg-4 p {
   margin-right: .75rem;
@@ -150,7 +147,6 @@ li{
 /* Global adjustments for mobile view */
 @media (max-width: 768px) {
   h2 {
-    font-size: 2rem;
     text-align: center;
   }
 
@@ -214,8 +210,7 @@ li{
 }
 
 .question{
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 2rem;
   margin-top: 1rem;
-  font-weight: bold;
 }
