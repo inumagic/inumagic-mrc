@@ -204,7 +204,6 @@ li{
 }
 
 .answer {
-  display: none;
   padding: 10px;
   margin: 5px 5px 20px 5px;
   background-color: #e0e0ff;
@@ -215,3 +214,15 @@ li{
   line-height: 2rem;
   margin-top: 1rem;
 }
+
+      /* 電腦版樣式 */
+      @media screen and (min-width: 1024px) {
+        .desktop-layout { display: block; }
+        .mobile-layout { display: none; }
+      }
+      
+      /* 手機版樣式 */
+      @media screen and (max-width: 1023px) {
+        .desktop-layout { display: none; }
+        .mobile-layout { display: block; }
+      }
