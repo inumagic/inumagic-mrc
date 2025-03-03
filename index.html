@@ -27,6 +27,24 @@
 <link href="bootstrap.min.css" rel="stylesheet">
 
     <style>
+      .text-box {
+  display: inline-block;  /* 讓內部內容根據自身大小換行 */
+  text-align: left;       /* 讓文字換行後靠左對齊 */
+  max-width: 80%;         /* 限制最大寬度，避免過長 */
+}
+
+      /* 電腦版樣式 */
+@media screen and (min-width: 1024px) {
+  .desktop-layout { display: block; }
+  .mobile-layout { display: none; }
+}
+
+/* 手機版樣式 */
+@media screen and (max-width: 1023px) {
+  .desktop-layout { display: none; }
+  .mobile-layout { display: block; }
+}
+
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -54,18 +72,29 @@
     <link href="carousel.css" rel="stylesheet">
   </head>
   <body>
-    
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:#F98B88;">
-        <div class="container-fluid">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
           <!-- Logo -->
           <a href="https://www.inumagic.com/">
             <img src="logo-white2.png" alt="Inu Magic Logo" style="height: 3rem;">
           </a>
+          
+          <!-- 按鈕區塊 -->
+          <div class="d-flex align-items-center">
+            <a href="https://line.me/R/ti/p/@642mjtib?oat_content=url&ts=11061732" target="_blank">
+              <button class="btn btn-link rounded-pill px-2 mx-1" type="button" style="color: white;">LINE</button>
+            </a>
+            <a href="https://www.facebook.com/inumagic/" target="_blank">
+              <button class="btn btn-link rounded-pill px-2 mx-1" type="button" style="color: white;">Facebook</button>
+            </a>
+          </div>
+          
           <!-- Toggle button for smaller screens -->
         </div>
       </nav>
     </header>
+    
 
 <main style="max-width: 100%;">
 
@@ -111,24 +140,39 @@
 
   <div class="container marketing" style="margin-top:0rem; max-width: 100%; padding: 0.5rem 2rem; background-color: #ffffff;">
     <section>
-        <h1  style=" text-align: center;">為什麼6到10歲是兒童矯正『超級黃金期』？</h1>  
-        <div class="container-fluid px-0" style="padding: 0.5rem 0.5rem; background-color: #ffffff; max-width: 100%; margin-bottom: 0rem; max-width: 100%;">
-           <h2>1. 混合齒列期的關鍵時期</h2>
-          <p class="lead" style="text-align: left;">6-10歲為混合齒列期，若孩子存在口呼吸或不正確的吞嚥方式，可能導致以下問題：</p> 
-          <ul>
-              <li><a style="font-weight: bold;">牙齒排列異常：</a>如牙齒暴牙或牙縫過大（牙開縫）。</li>
-              <li><a style="font-weight: bold;">心理影響：</a>孩子可能因牙齒問題而不愛笑，產生自卑心理，進而影響社交能力。</li>
-          </ul>            
 
-          <h2>2. 促進腦部發展</h2>
-          <p class="lead" style="text-align: left;">矯正牙弓可使牙齒咬合更緊密，有助於增加腦部血流量，促進海馬迴的生長，進而提升記憶力與學習專注力。</p>
+      
+<div class="container-fluid px-0" style=" background-color: #f8f9fa;">
+  <div style="padding: 2rem 1.5rem; border-radius: 10px; margin-top: 0.5rem;">
+    <div class="row flex-lg-row-reverse align-items-center g-4">
+      <!-- 圖片區塊 -->
+      <div class="col-10 col-sm-8 col-lg-5 mx-auto">
+        <img src="messageImage_1734432907688.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="900" height="auto" loading="lazy">
+      </div>
+      <!-- 文字區塊 -->
+      <div class="col-lg-6 mx-auto fade-in">
+        <h1>
+          為什麼6到10歲是兒童矯正『超級黃金期』？
+        </h1>
+        <h2>1. 混合齒列期的關鍵時期</h2>
+
+        <p class="lead">
+          6-10歲為混合齒列期，若孩子存在口呼吸或不正確的吞嚥方式，可能導致以下問題：
+        </p>
+        <ul>
+          <li><a style="font-weight: bold;">牙齒排列異常：</a>如牙齒暴牙或牙縫過大（牙開縫）。</li>
+          <li><a style="font-weight: bold;">心理影響：</a>孩子可能因牙齒問題而不愛笑，產生自卑心理，進而影響社交能力。</li>
+        </ul>  
+        <h2>2. 促進腦部發展</h2>
+        <p class="lead" style="text-align: left;">矯正牙弓可使牙齒咬合更緊密，有助於增加腦部血流量，促進海馬迴的生長，進而提升記憶力與學習專注力。</p>
+     
+          <h2>3. 改善健康問題</h2>
+          <p class="lead" style="text-align: left;">透過矯正可有效改善因口腔結構問題引發的鼻子過敏、鼻塞等症狀，提升呼吸道健康。</p> 
        
-            <h2>3. 改善健康問題</h2>
-            <p class="lead" style="text-align: left;">透過矯正可有效改善因口腔結構問題引發的鼻子過敏、鼻塞等症狀，提升呼吸道健康。</p> 
-          </div>
-        <div style="text-align: center;"> <!-- 添加这个div并设置其样式为居中 -->
+        <!-- 按鈕 -->
+        <div class="mt-4 text-center">
           <a href="https://line.me/R/ti/p/@642mjtib?oat_content=url&ts=11061732" target="_blank">
-              <button type="button" class="elementory-button-text" 
+            <button type="button" class="elementory-button-text" 
                       style="border-radius: 10px; background-color: #F98B88; color: white; padding: 10px; border: none; font-size: 1.8rem; align-items: center;background-image: 
                       linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.2)),
                       linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.2));
@@ -138,22 +182,24 @@
               </button>
           </a>
         </div>
-    </section>
-</div>
-
-
-
-
-<div class="container-fluid px-0" style="background-color: #ffffff; max-width: 100%;">
-  <div style="padding: 0.5rem 3rem; border-radius: 10px; max-width: 100%;">
-    <div class="row flex-lg-row-reverse align-items-center g-4">
-      <!-- 圖片區塊 -->
-      <div class="col-10 col-sm-8 col-lg-5 mx-auto">
-        <img src="case.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="100%" height="auto" loading="lazy">
+      </div>
     </div>
+  </div>
+</div>
+      
     
-      <div class="container-fluid px-0" style="padding-left: 2rem; padding-right: 2rem; background-color: #ffffff; max-width: 100%; ">
-        <p class="lead" style="text-align: center;">案例分享</p>
+         
+          </div>
+
+          <div class="container-fluid px-0" style="background-color: #ffffff; max-width: 100%;">
+            <div style="padding: 2rem 1rem; border-radius: 10px;">
+              <div class="row align-items-center d-flex justify-content-center">
+                <!-- 圖片區塊 -->
+                <div class="col-10 col-sm-6 col-lg-5 mx-auto d-flex justify-content-end">
+                  <img src="case.png" class="img-fluid" alt="Bootstrap Themes" width="500" height="auto" loading="lazy">
+                </div>
+                <!-- 文字區塊 -->
+                <div class="col-10 col-sm-6 col-lg-5 mx-auto fade-in d-flex flex-column align-items-start">
 
         <h1 style="text-align: center; ">
           為何要做新式兒童矯正？
@@ -224,66 +270,60 @@
 }
 
       </script>
-        <!-- 按鈕 -->
-        <div style="text-align: center;"> <!-- 添加这个div并设置其样式为居中 -->
-          <a href="https://line.me/R/ti/p/@642mjtib?oat_content=url&ts=11061732" target="_blank">
-              <button type="button" class="elementory-button-text" 
-                      style="border-radius: 10px; background-color: #F98B88; color: white; padding: 10px; border: none; font-size: 1.8rem; align-items: center;background-image: 
-                      linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.2)),
-                      linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.2));
-                  background-size: 20px 20px; /* 设置格子大小 */
-                  background-position: 0 0, 10px 10px;">
-                馬上咨詢
-              </button>
-          </a>
+                  <!-- 按鈕 -->
+                  <div class="mt-4 w-100 d-flex justify-content-center">
+                    <a href="https://line.me/R/ti/p/@642mjtib?oat_content=url&ts=11061732" target="_blank" style="text-decoration: none;">
+                      <button type="button" class="elementory-button-text" 
+                        style="border-radius: 10px; background-color: #F98B88; color: white; 
+                               padding: 10px; border: none; font-size: 1.8rem; 
+                               background-size: 20px 20px; display: block; margin: 0 auto;">
+                        馬上咨詢
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+<div class="container-fluid px-0" style="background-color: #f8f9fa; max-width: 80%;">
+  <div style="padding: 2rem 1rem; border-radius: 10px;">
+    <div class="row align-items-center d-flex justify-content-center">
+      <!-- 圖片區塊 -->
+      <div class="col-10 col-sm-6 col-lg-5 mx-auto d-flex justify-content-end">
+        <img src="0108.jpg" class="img-fluid" alt="Bootstrap Themes" width="500" height="auto" loading="lazy">
       </div>
-  
+      <!-- 文字區塊 -->
+      <div class="col-10 col-sm-6 col-lg-5 mx-auto fade-in d-flex flex-column align-items-start">
+        <h1 class="mb-2">
+          潘韞珊院長及專業醫師團隊
+        </h1>
+        <p class="lead mb-1">美國整體醫學博士</p>
+        <p class="lead mb-1">研究所教授</p>
+        <p class="lead mb-3">看診超過23年</p>
+        <h1 class="mb-3">
+          放寒假了！家長千萬別錯過！
+        </h1>
+        <!-- 按鈕 -->
+        <div class="mt-4 w-100 d-flex justify-content-center">
+          <a href="https://line.me/R/ti/p/@642mjtib?oat_content=url&ts=11061732" target="_blank" style="text-decoration: none;">
+            <button type="button" class="elementory-button-text" 
+              style="border-radius: 10px; background-color: #F98B88; color: white; 
+                     padding: 10px; border: none; font-size: 1.8rem; 
+                     background-size: 20px 20px; display: block; margin: 0 auto;">
+              馬上咨詢
+            </button>
+          </a>
+        </div>
+        
+        
       </div>
     </div>
   </div>
 </div>
 
-<div class="container-fluid px-0" style="background-color: #ffffff; max-width: 100%;">
-  <div style="padding: 2rem 1.5rem; border-radius: 10px;">
-    <div class="row align-items-center g-4">
-      <!-- 圖片區塊 -->
-      <div class="col-10 col-sm-8 col-lg-5 mx-auto">
-        <img src="0108.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="900" height="auto" loading="lazy">
-      </div>
-      <!-- 文字區塊 -->
-      <div class="col-lg-6 mx-auto fade-in" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        <h1>
-          潘韞珊院長及專業醫師團隊
-        </h1>
-        <p class="lead">
-          美國整體醫學博士        
-        </p>
-        <p class="lead">
-          研究所教授            
-        </p>
-        <p class="lead">
-          看診超過23年            
-        </p>
-        <h1>
-          放寒假了！家長千萬別錯過！
-        </h1>
-        <!-- 按鈕 -->
-        <div style="text-align: center;"> <!-- 添加这个div并设置其样式为居中 -->
-          <a href="https://line.me/R/ti/p/@642mjtib?oat_content=url&ts=11061732" target="_blank">
-              <button type="button" class="elementory-button-text" 
-                      style="border-radius: 10px; background-color: #F98B88; color: white; padding: 10px; border: none; font-size: 1.8rem; align-items: center;background-image: 
-                      linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.2)),
-                      linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.2));
-                  background-size: 20px 20px; /* 设置格子大小 */
-                  background-position: 0 0, 10px 10px;">
-                馬上咨詢
-              </button>
-          </a>
-      </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 <h1 style="text-align: center ;color: #ffffff; background-color: #F98B88; padding: 10px; border-radius: 8px; box-shadow: 2px 2px 4px #000000;">新式矯正器</h1>
@@ -405,7 +445,7 @@
   
 
 
-<script>
+<!--<script>
     document.querySelectorAll('.question').forEach(item => {
         item.addEventListener('click', function() {
             var answer = this.nextElementSibling; // Assumes that the answer div directly follows the question div
@@ -419,7 +459,7 @@
 </script>
    <hr>
 
-  <!-- FOOTER -->
+   FOOTER -->
   <footer class="container" style="margin-top: 2rem;">
     <p style="line-height: 1.5rem;"> &copy; 2025 魔法牙醫診所. 版權所有  &middot; </p>
     <div style="text-align: left;">
