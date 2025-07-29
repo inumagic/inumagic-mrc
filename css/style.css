@@ -524,3 +524,7 @@
 .footer .copyright a:hover {
     color: var(--primary);
 }
+
+.news-text p{
+    font-size: 1.2rem;
+}
