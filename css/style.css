@@ -558,3 +558,41 @@ h1{
 .news-text p{
     font-size: 1.2rem;
 }
+
+.treatment-table-section {
+  background-color: #ffffff; /* 溫暖米白 */
+  border-radius: 12px;
+}
+
+.treatment-table-section h2 {
+  color: #1B2C51; /* 草本綠 */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.treatment-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.05rem;
+  color: #333;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.treatment-table th,
+.treatment-table td {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: left;
+  background-color: #ffffff;
+}
+
+.treatment-table th {
+  background-color: #ffffff; /* 背景灰白 */
+  color: #1B2C51; /* 草本綠 */
+  font-weight: bold;
+}
+
+.news-text p{
+    font-size: 1.2rem;
+}
+
