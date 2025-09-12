@@ -468,7 +468,7 @@ a {
 /* blog single page */
 
 #blog-header {
-    background: url('../images/header.jpg') 50% 0 repeat-y fixed;
+    background: url('../img/header.jpg') 50% 0 repeat-y fixed;
     -webkit-background-size: cover;
     background-size: cover;
     background-position: bottom center;
@@ -1113,3 +1113,4 @@ footer .copyright-text {
 .owl-nav {
   display: none !important;
 }
+
