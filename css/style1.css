@@ -11,13 +11,20 @@ html,body {
      overflow-x: hidden;
   }
 
+strong {
+  color:#94bee3;
+}
 
+span{
+  color:#94bee3;
+}
 /*---------------------------------------
     Typorgraphy              
 -----------------------------------------*/
 h1,h2,h3,h4,h5,h6,
 blockquote {
   font-weight: 600;
+  color: #337ab7;
 }
 
 h1 {
@@ -51,7 +58,7 @@ h3 {
 }
 
 h4 {
-    color: #999;
+    color: #53469a;
     letter-spacing: 2px;
     margin-top: 22px;
 }
@@ -154,7 +161,7 @@ a {
 }
 
 .navbar-default .navbar-brand {
-  color: #505050;
+  color: #337ab7;
   font-size: 28px;
   font-weight: bold;
   line-height: 50px;
@@ -174,19 +181,19 @@ a {
 }
 
 .navbar-default .navbar-nav li a:hover {
-  color: #000;
+  color: #337ab7;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #000;
+  color: #337ab7;
   background-color: transparent;
 }
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #000;
+  color: #337ab7;
   background-color: transparent;
 }
 
@@ -196,13 +203,13 @@ a {
   }
 
 .navbar-default .navbar-toggle .icon-bar {
-    color: #000;
+    color: #337ab7;
     border-color: transparent;
   }
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus { 
-  color: #000;
+  color: #337ab7;
   background-color: transparent;
 }
 
@@ -468,7 +475,7 @@ a {
 /* blog single page */
 
 #blog-header {
-    background: url('../img/header.jpg') 50% 0 repeat-y fixed;
+    background: url('../images/') 50% 0 repeat-y fixed;
     -webkit-background-size: cover;
     background-size: cover;
     background-position: bottom center;
@@ -481,7 +488,7 @@ a {
      -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-    height: 50vh;
+    height: 60vh;
 }
 
 #blog .recent-post h3 {
@@ -1087,6 +1094,7 @@ footer .copyright-text {
 .treatment-table th {
   background-color: #ffffff; /* 背景灰白 */
   font-weight: bold;
+  color: #337ab7;
 }
 
 .treatment-table th:first-child,
@@ -1113,4 +1121,3 @@ footer .copyright-text {
 .owl-nav {
   display: none !important;
 }
-
