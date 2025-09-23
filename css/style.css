@@ -537,6 +537,7 @@ p{
 
 strong{
     color: #5DADE2;
+    font-weight: 500;
 }
 
 a{
@@ -686,3 +687,4 @@ h2.accordion-header button {
 .about-us .section-heading .main-button {
   margin-top: 50px;
 }
+
