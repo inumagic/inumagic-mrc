@@ -1234,10 +1234,12 @@ img {
   padding: 1rem;
   text-align: left;
   background-color: #EFF5FF;
+       font-size: 20px;
 }
 
 .treatment-table th {
   background-color: #EFF5FF; /* 背景灰白 */
   color: #1B2C51; /* 草本綠 */
   font-weight: bold;
+
 }
