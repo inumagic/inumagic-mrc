@@ -6,8 +6,6 @@ https://templatemo.com/tm-593-personal-shape
 
 */
 
-
-
 @charset "utf-8";
 /* CSS Document */
 
@@ -27,6 +25,22 @@ https://templatemo.com/tm-593-personal-shape
             overflow: hidden;
         }
 
+        .footer::before,
+.footer::after {
+  pointer-events: none;  /* 不要阻擋滑鼠點擊 */
+}
+.footer a {
+  position: relative;   /* 確保連結顯示在裝飾層上 */
+  z-index: 1;
+  color: #fff;          /* 給明顯顏色 */
+  display: block;       /* 每個 a 佔一行，點擊範圍比較好點 */
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
         .footer::before {
             content: '';
             position: absolute;
@@ -36,6 +50,8 @@ https://templatemo.com/tm-593-personal-shape
             bottom: 0;
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="footer-grid" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M 12 0 L 0 0 0 12" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23footer-grid)"/></svg>');
             opacity: 0.4;
+            pointer-events: none;
+            z-index: 0;
         }
 
         .footer::after {
@@ -114,8 +130,13 @@ https://templatemo.com/tm-593-personal-shape
 
             .footer-right a {
                 font-size: 0.85rem;
+                position: relative;
+                z-index: 1;
             }
         }
+/* 行動選單關閉時不攔截點擊；開啟時再啟用 */
+.mobile-menu { pointer-events: none; }
+.mobile-menu.active { pointer-events: auto; }
 
         @media (max-width: 480px) {
             .footer-right {
@@ -124,7 +145,31 @@ https://templatemo.com/tm-593-personal-shape
             }
         }
 
-       
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #8b5cf6;
+            --accent-color: #f59e0b;
+            --accent-pink: #ec4899;
+            --accent-cyan: #06b6d4;
+            --text-primary: #0f172a;
+            --text-secondary: #64748b;
+            --text-light: #ffffff;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-dark: #0f172a;
+            --bg-card: rgba(255, 255, 255, 0.95);
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-tertiary: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --gradient-elegant: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --glass: rgba(255, 255, 255, 0.15);
+            --glass-border: rgba(255, 255, 255, 0.2);
+        }
 
         body {
             font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
@@ -287,7 +332,7 @@ https://templatemo.com/tm-593-personal-shape
 
         .mobile-nav-links a {
             font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             font-weight: 500;
             color: var(--text-light);
             text-decoration: none;
@@ -571,7 +616,7 @@ https://templatemo.com/tm-593-personal-shape
 
         /* Section Styles */
         section {
-            padding: 8rem 0;
+            padding: 3rem 0;
         }
 
         .container {
@@ -583,9 +628,9 @@ https://templatemo.com/tm-593-personal-shape
         .section-title {
             text-align: center;
             font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 600;
-            margin-bottom: 4rem;
+            margin-bottom: 1.5rem;
             background: var(--gradient-elegant);
             -webkit-background-clip: text;
             background-clip: text;
@@ -630,19 +675,21 @@ https://templatemo.com/tm-593-personal-shape
             align-items: center;
             position: relative;
         }
+        .fade-in,
+.slide-in-left,
+.slide-in-right {
+  opacity: 1 !important;
+  transform: none !important;
+}
+/* 手機版時縮小 about-content 的間距 */
+@media (max-width: 768px) {
+  .about-content {
+    gap: 2rem;  /* 或 1.5rem，看你想多近 */
+  }
+}
 
-        .about-image {
-            width: 100%;
-            height: 500px;
-            background: url('img/smiles.png') center/cover;
-            border-radius: 30px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: var(--shadow-2xl);
-            transform: rotate(-2deg);
-            transition: transform 0.4s ease;
-        }
 
+        
         .about-image:hover {
             transform: rotate(0deg) scale(1.02);
         }
@@ -654,7 +701,6 @@ https://templatemo.com/tm-593-personal-shape
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.3) 0%, rgba(139, 92, 246, 0.2) 100%);
             transition: opacity 0.3s ease;
         }
 
@@ -662,9 +708,7 @@ https://templatemo.com/tm-593-personal-shape
             opacity: 0.7;
         }
 
-        .about-image::after {
-
-        }
+      
 
         .about-text h3 {
             font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
@@ -677,7 +721,7 @@ https://templatemo.com/tm-593-personal-shape
 
         .about-text p {
             font-size: 1.1rem;
-            color: var(--text-secondary);
+            color: black;
             margin-bottom: 2rem;
             line-height: 1.8;
         }
@@ -694,7 +738,7 @@ https://templatemo.com/tm-593-personal-shape
             background: var(--bg-card);
             color: var(--primary-color);
             border-radius: 30px;
-            font-size: 1.2rem;
+            font-size: 0.9rem;
             font-weight: 600;
             border: 1px solid rgba(99, 102, 241, 0.2);
             transition: all 0.3s ease;
@@ -1071,6 +1115,7 @@ https://templatemo.com/tm-593-personal-shape
 
         /* Animation Classes */
         .fade-in {
+            opacity: 0;
             transform: translateY(40px);
             transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -1081,7 +1126,7 @@ https://templatemo.com/tm-593-personal-shape
         }
 
         .slide-in-left {
-           
+            opacity: 0;
             transform: translateX(-60px);
             transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -1092,7 +1137,7 @@ https://templatemo.com/tm-593-personal-shape
         }
 
         .slide-in-right {
-            
+            opacity: 0;
             transform: translateX(60px);
             transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -1120,6 +1165,9 @@ https://templatemo.com/tm-593-personal-shape
         }
 
         @media (max-width: 768px) {
+            .about-content {
+    gap: 1rem;  /* 或 1.5rem，看你想多近 */
+  }
             .nav-links {
                 display: none;
             }
@@ -1149,7 +1197,7 @@ https://templatemo.com/tm-593-personal-shape
             }
 
             section {
-                padding: 5rem 0;
+                padding: 1.5rem 0;
             }
 
             .form-row {
@@ -1172,7 +1220,7 @@ https://templatemo.com/tm-593-personal-shape
             }
 
             .section-title {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             .nav-container {
@@ -1197,9 +1245,15 @@ https://templatemo.com/tm-593-personal-shape
 
 .news-text p{
     font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
-
+    color: black;
     font-size: 1.2rem;
     line-height: 2;
+}
+
+.text-special{
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+
+    font-size: 1.2rem;
 }
 
 img {
@@ -1209,8 +1263,7 @@ img {
 }
 
 .treatment-table-section {
-  background-color: #EFF5FF; /* 溫暖米白 */
-  padding: 3rem 1rem;
+  background-color: #ffffff; /* 溫暖米白 */
   border-radius: 12px;
 }
 
@@ -1233,13 +1286,20 @@ img {
   border: 1px solid #ddd;
   padding: 1rem;
   text-align: left;
-  background-color: #EFF5FF;
-       font-size: 20px;
+  background-color: #ffffff;
 }
 
 .treatment-table th {
-  background-color: #EFF5FF; /* 背景灰白 */
+  background-color: #ffffff; /* 背景灰白 */
   color: #1B2C51; /* 草本綠 */
   font-weight: bold;
+}
 
+.case-carousel {
+  padding-top: 1rem;   /* 上方距離 */
+  padding-bottom: 3rem; /* 下方距離 */
+}
+
+strong{
+    color: #1B2C51;
 }
