@@ -116,12 +116,8 @@
             </div>
             </div>
 
+           
 
-
-
-
-
-                
     <!-- 右側文字 -->
     <div class="col-md-6">
             <p><strong>配戴時段建議（家長必讀）</strong></p>
@@ -135,6 +131,131 @@
             <p><i class="far fa-check-circle text-primary me-3"></i>第四天開始每次延長到二十至三十分鐘</p>            
           </div>
           </div>
+ 
+<div style="margin-top: 10px; padding: 20px 20px; background-color: #EFF5FF;">
+                <h5 class="text-center">新式功能性矯正裝置說明語音</h5>
+<style>
+/* 播放圖示區塊 */
+.audio-play-icon {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 16px; /* 三角形 ▶ */
+  border-color: transparent transparent transparent #5DADE2;
+  cursor: pointer;
+  margin-right: 12px;
+  transition: 0.2s ease;
+}
+
+.audio-play-icon.paused {
+  width: 16px;
+  height: 16px;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.audio-play-icon.paused::before,
+.audio-play-icon.paused::after {
+  content: "";
+  width: 5px;
+  height: 16px;
+  background: #5DADE2;
+}
+
+/* 語音條 */
+.audio-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.audio-bar {
+  width: 260px;
+  height: 8px;
+  background: #d0dbe5;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.audio-progress {
+  width: 0%;
+  height: 8px;
+  background: #5DADE2;
+  border-radius: 5px;
+  transition: width 0.1s linear;
+}
+
+.audio-circle {
+  width: 14px;
+  height: 14px;
+  background: #5DADE2;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  transition: left 0.1s linear;
+}
+</style>
+
+<audio id="mrcAudio">
+  <source src="audio/audio1.mp3" type="audio/mpeg">
+</audio>
+
+<div class="audio-wrapper">
+  <div id="playIcon" class="audio-play-icon"></div>
+
+  <div class="audio-bar" id="audioBar">
+    <div class="audio-progress" id="audioProgress"></div>
+    <div class="audio-circle" id="audioCircle"></div>
+  </div>
+</div>
+
+<script>
+const audio = document.getElementById('mrcAudio');
+const bar = document.getElementById('audioBar');
+const progress = document.getElementById('audioProgress');
+const circle = document.getElementById('audioCircle');
+const icon = document.getElementById('playIcon');
+
+let isPlaying = false;
+
+// 切換播放/暫停
+function togglePlay() {
+  if (!isPlaying) {
+    audio.play();
+    isPlaying = true;
+    icon.classList.add("paused"); // 變成兩條直槓
+  } else {
+    audio.pause();
+    isPlaying = false;
+    icon.classList.remove("paused"); // 回到三角形
+  }
+}
+
+// 點 icon 可播放/暫停
+icon.addEventListener('click', togglePlay);
+
+// 點語音條也可播放/暫停
+bar.addEventListener('click', togglePlay);
+
+// 進度更新
+audio.addEventListener('timeupdate', () => {
+  const percent = audio.currentTime / audio.duration;
+  progress.style.width = (percent * 100) + "%";
+  circle.style.left = (percent * 100) + "%";
+});
+
+// 播放結束歸零
+audio.addEventListener('ended', () => {
+  isPlaying = false;
+  icon.classList.remove("paused");
+  progress.style.width = "0%";
+  circle.style.left = "0%";
+});
+</script>
+</div>
+
 
         <div>
         <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 mt-5 mb-2">矯正裝置配戴教學</h4>
@@ -175,9 +296,9 @@
    
     
     <div>
-        <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 mb-2">日本矯正器介紹影片</h4>
+        <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 mb-2">法國矯正器介紹影片</h4>
         <iframe
-            src="https://www.youtube.com/embed/McDHHKUOg8Q" 
+            src="https://www.youtube.com/embed/tngkfm3AL4s" 
             title="YouTube video player" 
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -187,10 +308,10 @@
     </div>
 
     <div>
-        <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 mt-2 mb-2">法國矯正器介紹影片</h4>
+        <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 mt-2 mb-2">日本矯正器介紹影片</h4>
         <!-- 下方的 iframe -->
          <iframe
-            src="https://www.youtube.com/embed/D135Ioj9bjM" 
+            src="https://www.youtube.com/embed/BUzBNoaG1qA" 
             title="YouTube video player" 
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
