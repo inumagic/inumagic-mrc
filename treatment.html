@@ -117,8 +117,30 @@
             </div>
 
 <audio id="mrcAudio">
-  <source src="audio/audio1.mp3" type="audio/mpeg">
+  <source src="your-audio-file.mp3" type="audio/mpeg">
 </audio>
+
+<button id="playBtn">播放 / 暫停</button>
+
+<script>
+  const audio = document.getElementById('mrcAudio');
+  const btn = document.getElementById('playBtn');
+
+  btn.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      btn.textContent = "暫停";
+    } else {
+      audio.pause();
+      btn.textContent = "播放";
+    }
+  });
+
+  audio.addEventListener('ended', () => {
+    btn.textContent = "播放";
+  });
+</script>
+
 
 
 
