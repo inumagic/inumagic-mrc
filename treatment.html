@@ -116,30 +116,33 @@
             </div>
             </div>
 
-<audio controls>
-  <source src="your-audio-file.mp3" type="audio/audio1.mp3">
+<audio id="mrcAudio">
+  <source src="your-audio-file.mp3" type="audio/mpeg">
 </audio>
 
-<button id="playBtn">播放 / 暫停</button>
+<div id="audioBox" style="width:200px; padding:10px; background:#eee; cursor:pointer;">
+  點我播放語音
+</div>
 
 <script>
   const audio = document.getElementById('mrcAudio');
-  const btn = document.getElementById('playBtn');
+  const box = document.getElementById('audioBox');
 
-  btn.addEventListener('click', () => {
+  box.addEventListener('click', () => {
     if (audio.paused) {
       audio.play();
-      btn.textContent = "暫停";
+      box.textContent = "播放中…（再次點擊暫停）";
     } else {
       audio.pause();
-      btn.textContent = "播放";
+      box.textContent = "點我播放語音";
     }
   });
 
   audio.addEventListener('ended', () => {
-    btn.textContent = "播放";
+    box.textContent = "點我播放語音";
   });
 </script>
+
 
                 
     <!-- 右側文字 -->
